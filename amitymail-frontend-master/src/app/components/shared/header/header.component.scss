@@ -1,0 +1,17 @@
+@media (min-width: 768px){
+.navbar-toggleable-sm {
+    display: block!important;
+}
+}
+#main-menu-navigation li.dropdown:hover .dropdown-menu {
+    display: block !important;
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 1;
+}
+.navbar-nav li.dropdown-user:hover .dropdown-menu {
+    display: block !important;
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    opacity: 1;
+}

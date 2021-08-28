@@ -1,0 +1,505 @@
+<html>
+
+<head>
+	<title> Email System </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+		integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+		integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+		integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="icon" type="image/png" href="images.jpeg">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+	<style>
+		body {
+			background: #fbfbfd;
+		}
+
+		.new_footer_area {
+			background: #fbfbfd;
+		}
+
+		.new_footer_top {
+			padding: 120px 0px 270px;
+			position: relative;
+			overflow-x: hidden;
+		}
+
+		.new_footer_area .footer_bottom {
+			padding-top: 5px;
+			padding-bottom: 50px;
+		}
+
+		.footer_bottom {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 20px;
+			color: #7f88a6;
+			padding: 27px 0px;
+		}
+
+		.new_footer_top .company_widget p {
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 28px;
+			color: #6a7695;
+			margin-bottom: 20px;
+		}
+
+		.new_footer_top .company_widget .f_subscribe_two .btn_get {
+			border-width: 1px;
+			margin-top: 20px;
+		}
+
+		.btn_get_two:hover {
+			background: transparent;
+			color: #5e2ced;
+		}
+
+		.btn_get:hover {
+			color: #fff;
+			background: #6754e2;
+			border-color: #6754e2;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		a:hover,
+		a:focus,
+		.btn:hover,
+		.btn:focus,
+		button:hover,
+		button:focus {
+			text-decoration: none;
+			outline: none;
+		}
+
+		.new_footer_top .f_widget.about-widget .f_list li a:hover {
+			color: #5e2ced;
+		}
+
+		.new_footer_top .f_widget.about-widget .f_list li {
+			margin-bottom: 11px;
+		}
+
+		.f_widget.about-widget .f_list li:last-child {
+			margin-bottom: 0px;
+		}
+
+		.f_widget.about-widget .f_list li {
+			margin-bottom: 15px;
+		}
+
+		.f_widget.about-widget .f_list {
+			margin-bottom: 0px;
+		}
+
+		.new_footer_top .f_social_icon a {
+			width: 44px;
+			height: 44px;
+			line-height: 43px;
+			background: transparent;
+			border: 1px solid #e2e2eb;
+			font-size: 24px;
+		}
+
+		.f_social_icon a {
+			width: 46px;
+			height: 46px;
+			border-radius: 50%;
+			font-size: 14px;
+			line-height: 45px;
+			color: #858da8;
+			display: inline-block;
+			background: #ebeef5;
+			text-align: center;
+			-webkit-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+		}
+
+		.ti-facebook:before {
+			content: "\e741";
+		}
+
+		.ti-twitter-alt:before {
+			content: "\e74b";
+		}
+
+		.ti-vimeo-alt:before {
+			content: "\e74a";
+		}
+
+		.ti-pinterest:before {
+			content: "\e731";
+		}
+
+		.btn_get_two {
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			background: #5e2ced;
+			border-color: #5e2ced;
+			color: #fff;
+		}
+
+		.btn_get_two:hover {
+			background: transparent;
+			color: #5e2ced;
+		}
+
+		.new_footer_top .f_social_icon a:hover {
+			background: #5e2ced;
+			border-color: #5e2ced;
+			color: white;
+		}
+
+		.new_footer_top .f_social_icon a+a {
+			margin-left: 4px;
+		}
+
+		.new_footer_top .f-title {
+			margin-bottom: 30px;
+			color: #263b5e;
+		}
+
+		.f_600 {
+			font-weight: 600;
+		}
+
+		.f_size_18 {
+			font-size: 18px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #4b505e;
+		}
+
+		.new_footer_top .f_widget.about-widget .f_list li a {
+			color: #6a7695;
+		}
+
+		.new_footer_top .footer_bg {
+			position: absolute;
+			bottom: 0;
+			background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+			width: 100%;
+			height: 266px;
+		}
+
+		.new_footer_top .footer_bg .footer_bg_one {
+			background: url("https://1.bp.blogspot.com/-mvKUJFGEc-k/XclCOUSvCnI/AAAAAAAAUAE/jnBSf6Fe5_8tjjlKrunLBXwceSNvPcp3wCLcBGAsYHQ/s1600/volks.gif") no-repeat center center;
+			width: 330px;
+			height: 105px;
+			background-size: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 30%;
+			-webkit-animation: myfirst 22s linear infinite;
+			animation: myfirst 22s linear infinite;
+		}
+
+		.new_footer_top .footer_bg .footer_bg_two {
+			background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+			width: 88px;
+			height: 100px;
+			background-size: 100%;
+			bottom: 0;
+			left: 38%;
+			position: absolute;
+			-webkit-animation: myfirst 30s linear infinite;
+			animation: myfirst 30s linear infinite;
+		}
+
+		.ScrollStyle {
+			height: 560px;
+			/* width: 1000px; */
+			/* overflow-y: auto; */
+		}
+
+		@-moz-keyframes myfirst {
+			0% {
+				left: -25%;
+			}
+
+			100% {
+				left: 100%;
+			}
+		}
+
+		@-webkit-keyframes myfirst {
+			0% {
+				left: -25%;
+			}
+
+			100% {
+				left: 100%;
+			}
+		}
+
+		@keyframes myfirst {
+			0% {
+				left: -25%;
+			}
+
+			100% {
+				left: 100%;
+			}
+		}
+
+		/*************footer End*****************/
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid" style="background-color: white;">
+		<div class="jumbotron" style="height:70px; margin-bottom:5px; background-color:white;"> <img
+				src="../../../assets//images/email-logo.gif"
+				style="position:absolute; top:15px; left:40px; height:80px; width:80px;"> <img
+				src="../../../assets/images/amity.gif"
+				style="position:absolute; top:-20px; left:150px; height: 200px; width:300px;">
+			<button type="button" (click)="logOut()" id="stars3"
+				style="font-size:1.2em; padding-top:10px; padding-bottom:10px; position:absolute; bottom:10px; right:40px; background-color:plum"
+				class="btn btn-primary"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> <a>
+					<font color=white>Logout</font>
+				</a> </button>
+		</div>
+	</div>
+	<!--Side navbar -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card" style="width: 20rem; border:1px solid plum; margin-left:10px;"> <img
+						class="card-img-top" src="../../../assets/images/avatar-logo.png"
+						style="height:220px; padding:10px;" alt="Card image cap">
+					<!--<img class="card-img-top" src="avatar1.png" style="height:220px; padding:10px;" alt="Card image cap">-->
+					<div class="card-block" style="margin-top: 10px; border-top:1px solid plum;">
+						<h4 class="card-title" style="text-align: center;">Hello, {{profile?.name}}</h4>
+						<h6 style="text-align: center;">{{profile?.emailId}}</h6>
+					</div>
+					<div class="list-group">
+						<button type="button" id="stars" class="btn btn-default" data-toggle="modal"
+							data-target="#myModal"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+							<div class="hidden-xs" style="font-size:1.2em; padding-top:10px; padding-bottom:10px;"><i
+									class="fa fa-envelope" aria-hidden="true"></i>Compose</div>
+						</button>
+						<button type="button" (click)="getInboxMails()" id="stars1" class="btn btn-default active"
+							href="#tab1" data-toggle="tab"><a style="color: black;"><span
+									class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<div class="hidden-xs" style="font-size:1.2em; padding-top:10px; padding-bottom:10px;">
+									<i class="fa fa-inbox" aria-hidden="true"></i>Inbox
+								</div>
+							</a></button>
+						<button type="button" (click)="getSentMails()" id="stars2" class="btn btn-default" href="#tab2"
+							data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+							<div class="hidden-xs" style="font-size:1.2em; padding-top:10px; padding-bottom:10px;"><i
+									class="fa fa-paper-plane" aria-hidden="true"></i>Sent items</div>
+						</button>
+						<button type="button" (click)="getStarredMails()" id="stars3" class="btn btn-default"
+							href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-star"
+								aria-hidden="true"></span>
+							<div class="hidden-xs" style="font-size:1.2em; padding-top:10px; padding-bottom:10px;"><i
+									class="fa fa-star" aria-hidden="true"></i>Starred</div>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!--Navbar content shown here-->
+			<div class="col-md-9">
+				<div class="well">
+					<div class="tab-content">
+						<!--This is TAB 1-->
+						<!-- <div class="ScrollStyle"> -->
+						<div class="tab-pane in active" id="tab1">
+							<!--*********************-->
+							<div class="ScrollStyle">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="well">
+											<div class="list-group">
+												<div *ngFor="let item of mailsData; let i = index" id="accordion"
+													role="tablist" aria-multiselectable="true">
+													<button style="width: 920px;">
+														<a (click)="mailView(item._id,'inbox')"
+															class="list-group-item list-group-item-action flex-column align-items-start">
+															<div class="d-flex w-100 justify-content-between">
+																<h5 class="mb-1"><b>From: {{item?.from?.emailId}}</b>
+																</h5> <small>
+																	<h5><b>Subject: {{item?.subject}} </b>
+
+																	</h5>
+																</small> <small>
+																	<h5><b>Recieved On: {{item?.createdAt | date:
+																			'dd/MM/yyyy'}}</b>
+
+																	</h5>
+																</small>
+															</div>
+														</a>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- </div> -->
+						<!--tab 1 ends-->
+						<!--This is TAB 2-->
+						<div class="tab-pane fade in" id="tab2">
+							<!--*********************-->
+							<div class="ScrollStyle">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="well">
+											<div class="list-group" *ngFor="let item of sentMailsData; let i = index">
+												<button style="width: 920px;">
+													<a (click)="mailView(item._id,'Sent')"
+														class="list-group-item list-group-item-action flex-column align-items-start"
+														data-toggle="collapse" data-target="#collapse'.$j.'">
+														<div class="d-flex w-100 justify-content-between">
+															<h5 class="mb-1"><b>To: {{item?.to?.emailId}} </b>
+
+															</h5> <small>
+																<h5><b>Subject: {{item?.subject}}</b>
+
+																</h5>
+															</small> <small>
+																<h5><b>Sent On: {{item?.createdAt | date:
+																		'dd/MM/yyyy'}}</b>
+																</h5>
+															</small>
+														</div>
+													</a>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--*********************-->
+						<div class="tab-pane fade in" id="tab3">
+							<!--*********************-->
+							<div class="ScrollStyle">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="well">
+											<div class="list-group" *ngFor="let item of starredMails; let i = index">
+												<button style="width: 920px;">
+													<a (click)="mailView(item._id,'star')"
+														class="list-group-item list-group-item-action flex-column align-items-start"
+														data-toggle="collapse" data-target="#collapse'.$j.'">
+														<div class="d-flex w-100 justify-content-between">
+															<h5 class="mb-1"><b>From: {{item?.from?.emailId}} </b>
+
+															</h5> <small>
+																<h5><b>Subject: {{item?.subject}}</b>
+
+																</h5>
+															</small> <small>
+																<h5><b>Sent On: {{item?.createdAt | date:
+																		'dd/MM/yyyy'}}</b>
+																</h5>
+															</small>
+														</div>
+													</a>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--tab 2 ends-->
+					<!--COMPOSE MAIL START-->
+					<div id="myModal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h3 class="modal-title" style="margin-right:160px;">Compose Mail</h3>
+								</div>
+								<div class="modal-body">
+									<form role="form" id="myform" [formGroup]="myForm" (ngSubmit)="sendMail()"
+										class="form-horizontal" method="POST" name="frm1" action="compose1.php"
+										enctype="multipart/form-data">
+										<div class="form-group">
+											<label class="col-lg-2 control-label">To</label>
+											<div class="col-lg-10">
+												<input type="text" placeholder="" id="inputEmail1" formControlName="to"
+													class="form-control" name=t1 required>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-lg-2 control-label">Subject</label>
+											<div class="col-lg-10">
+												<input type="text" placeholder="" formControlName="subject"
+													id="inputPassword1" class="form-control" name=t2>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-lg-2 control-label">Message</label>
+											<div class="col-lg-10">
+												<textarea rows="10" cols="15" formControlName="body"
+													class="form-control" id="" name=t3 required></textarea>
+											</div>
+										</div>
+										<!-- <div class="form-group">
+											<label class="col-lg-2 control-label">Attachment</label>
+											<div class="col-lg-10">
+												<input type="file" placeholder="" id="" class="form-control" name=t4>
+											</div>
+										</div> -->
+										<div class="form-group">
+											<div class="col-lg-offset-2 col-lg-10">
+												<button class="btn btn-info" type="submit">Send</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="new_footer_area bg_color">
+		<div class="new_footer_top">
+			<div class="footer_bg">
+				<div class="footer_bg_one"></div>
+				<div class="footer_bg_two"></div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-sm-7">
+						<p class="mb-0 f_400">© 2021 All rights reserved.</p>
+					</div>
+					<div class="col-lg-6 col-sm-5 text-right" style="font-size: 20px;">
+						<p>Made by<i class="icon_heart"></i><a> Vinita Suthar</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

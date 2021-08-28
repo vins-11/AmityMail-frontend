@@ -1,0 +1,84 @@
+<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-static-top navbar-dark bg-gradient-x-grey-blue navbar-border navbar-brand-center">
+    <div class="navbar-wrapper">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a href="#" class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="ft-menu font-large-1"></i></a>
+                </li>
+                <li class="nav-item"><a href="index.php" class="navbar-brand">
+      <h2 class="brand-text">ABACUSLY</h2>
+      </a>
+                </li>
+                <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container"><i class="fa fa-ellipsis-v"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-container content container-fluid">
+            <div id="navbar-mobile" class="collapse navbar-toggleable-sm">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item hidden-sm-down"><a href="#" class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="fas fa-bars"></i></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav float-xs-right">
+                    <li class="dropdown dropdown-notification nav-item"><a href="#" data-toggle="dropdown" class="nav-link nav-link-label"><i class="ficon ft-bell"></i><span class="tag tag-pill tag-default tag-danger tag-default tag-up">5</span></a>
+                        <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                            <li class="dropdown-menu-header">
+                                <h6 class="dropdown-header m-0"><span class="grey darken-2">Notifications</span><span class="notification-tag tag tag-default tag-danger float-xs-right m-0">5 New</span></h6>
+                            </li>
+                            <li class="list-group scrollable-container">
+                                <a href="javascript:void(0)" class="list-group-item">
+                                    <div class="media">
+                                        <div class="media-left valign-middle"><i class="ft-plus-square icon-bg-circle bg-cyan"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6 class="media-heading">You have new order!</h6>
+                                            <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                            <small>
+                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">30 minutes ago</time>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-menu-footer"><a href="" class="dropdown-item text-muted text-xs-center">Read all notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown dropdown-user nav-item">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online"><img src="{{env}}uploads/images/{{imagelink}}" alt="avatar"><i></i></span><span class="user-name">Admin Cool</span></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="src\assets\images\avatar.png" [routerLink]="['/admin/update-profile']" class="dropdown-item"><i class="ft-user"></i> Edit Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a (click)="logout()" class="dropdown-item"><i class="ft-power"></i> Logout</a> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-dark navbar-shadow menu-border" role="navigation" data-menu="menu-wrapper">
+    <div class="navbar-container main-menu-content" data-menu="menu-container">
+        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class="nav-item"><a class="nav-link" [routerLink]="['/admin/manage-dashboard']"><i class="ft-home"></i><span>Dashboard</span></a>
+            </li>
+
+            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"  aria-expanded="false"><i class="fa fa-tags"></i><span>Master</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" [routerLink]="['/admin/manage-classes']" data-toggle="dropdown">Classes</a> </li>
+                    <li><a class="dropdown-item"  [routerLink]="['/admin/manage-subjects']" data-toggle="dropdown">Subject</a> </li>
+                    <li><a class="dropdown-item" [routerLink]="['/admin/manage-topics']" data-toggle="dropdown">Topics</a> </li>
+                </ul>
+            </li>
+            
+            <li class="nav-item"><a class="nav-link"  [routerLink]="['/admin/manage-students']"><i class="fas fa-user"></i><span>Students</span></a></li>
+            
+            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"  aria-expanded="false"><i class="fa fa-envelope"></i><span>Notification</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" [routerLink]="['/admin/send-notifications']"  data-toggle="dropdown">Send SMS</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

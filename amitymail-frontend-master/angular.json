@@ -1,0 +1,154 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "abacusly": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/abacusly",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets/images/forestbridge.jpg",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/ngx-toastr/toastr.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/bootstrap-extended.min.css",
+              "src/assets/css/app.min.css",
+              "src/assets/css/colors.min.css",
+              "src/assets/css/core/colors/palette-gradient.min.css",
+              "src/assets/css/dropzone.css",
+              "src/assets/css/style.css",
+              "src/assets/css/style_inner.css",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "src/assets/vendors/js/vendors.min.js",
+              "src/assets/vendors/js/extensions/unslider-min.js",
+              "src/assets/vendors/js/timeline/horizontal-timeline.js",
+              "src/assets/js/core/app-menu.min.js",
+              "src/assets/js/core/app.min.js",
+              "src/assets/js/scripts/customizer.min.js",
+              "src/assets/js/scripts/pages/dashboard-ecommerce.min.js",
+              "src/assets/js/dropzone.js",
+              "src/assets/js/custom.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "abacusly:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "abacusly:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "abacusly:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "abacusly:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "abacusly:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "abacusly",
+  "cli": {
+    "analytics": "bd359da5-5368-4996-838b-5c9bff0846ef"
+  }
+}
